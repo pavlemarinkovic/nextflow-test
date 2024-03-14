@@ -1,0 +1,46 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Input test application",
+    "description": "Description",
+    "type": "object",
+    "properties": {
+        "file-input": {
+            "type": "string",
+            "format": "file-path",
+            "description": "File picker element for file-path",
+            "help_text": "File picker element alt text"
+        },
+        "file-input-too": {
+            "type": "string",
+            "format": "path",
+            "description": "File picker element for path",
+            "help_text": "File picker element alt text"
+        },
+        "directory-input": {
+            "type": "string",
+            "format": "directory-path",
+            "description": "File picker element for Directories",
+            "help_text": "File picker element for Directories alt text"
+        },
+        "string-input": {
+            "type": "string",
+            "description": "String input",
+            "help_text": "String input alt text"
+        },
+        "integer-input": {
+            "type": "integer",
+            "description": "Integer input",
+            "help_text": "Integer input alt text"
+        },
+        "number-input": {
+            "type": "number",
+            "description": "Number input",
+            "help_text": "Number input alt text"
+        },
+        "boolean-input": {
+            "type": "boolean",
+            "description": "Boolean input",
+            "help_text": "Boolean input alt text"
+        }
+    }
+}

@@ -1,0 +1,28 @@
+app_content:
+    code_package: 65f06c04a0ae034556b17fe2
+    entrypoint: main.nf
+    executor_version: 23.04.1
+class: nextflow
+cwlVersion: None
+hints:
+-   class: sbg:NextflowExecutionMode
+    value: multi-instance
+inputs:
+-   doc: List of files not added as explicit workflow inputs but required for workflow
+        execution.
+    id: auxiliary_files
+    label: NOT Auxiliary files
+    type: File[]?
+outputs:
+-   doc: This is a template output. Please change glob to directories specified in
+        publishDir in the workflow.
+    id: nf_workdir
+    label: Work Directory
+    outputBinding:
+        glob: work
+    type: Directory?
+requirements:
+-   class: InlineJavascriptRequirement
+-   class: InitialWorkDirRequirement
+    listing:
+    - $(inputs.auxiliary_files)
